@@ -1,11 +1,14 @@
 sources:
   - name: jaffle_shop
+    description: A clone of a Postgress database used in dbt tutorials
     database: raw
     schema: jaffle_shop
     tables:
       - name: customers
+        description: Raw customers data
         columns:
           - name: id
+            description: The primary key for the customers table
             data_tests:
               - not_null
               - unique
